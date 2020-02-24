@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        image: nginx:1.14.2
+        ports:
+          - 80:80
+        volumes:
+          - ./:/var/www/html
+          - ./config/docker/nginx.conf:/etc/nginx/nginx.conf
